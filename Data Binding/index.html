@@ -26,6 +26,11 @@
             <p v-html="brandName"></p>
         </div>
 
+        <div>
+            <h2 v-bind:id="myId">Data Id</h2>
+            <button v-bind:disabled="isDisabled">Bind</button>
+        </div>
+
     </div>
 
     
@@ -36,7 +41,9 @@
             data: {
                 name: "Vishwas!",
                 appName: "Codevolution",
-                brandName: "<b>Codevolution</b>"
+                brandName: "<b>Codevolution</b>",
+                myId: "dataId",
+                isDisabled: false
             }
         });
     
