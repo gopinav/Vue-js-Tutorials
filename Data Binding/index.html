@@ -8,6 +8,7 @@
 </head>
 <body>
     <div id="my-app">
+
         <h1> Hello {{name}}</h1>
         <h1>{{name}} - {{appName}}</h1>
         <h1 v-text="appName">Application</h1>
@@ -19,6 +20,12 @@
             <p v-text="appName" v-once></p>
         </div>
 
+        <div>
+            <p>{{brandName}}</p>
+            <p v-text="brandName"></p>
+            <p v-html="brandName"></p>
+        </div>
+
     </div>
 
     
@@ -28,7 +35,8 @@
             el: '#my-app',
             data: {
                 name: "Vishwas!",
-                appName: "Codevolution"
+                appName: "Codevolution",
+                brandName: "<b>Codevolution</b>"
             }
         });
     
