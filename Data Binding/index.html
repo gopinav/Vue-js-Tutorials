@@ -49,6 +49,7 @@
         <div>
             <h1 v-bind:class="{'sold-out': true}">Interstellar</h1>
             <h1 v-bind:class="{'sold-out': isSoldOut, 'new-movie': isNewMovie}">Thor</h1>
+            <h1 v-bind:class="[isSoldOut ? soldOut : '', newMovie]">Deadpool</h1>
         </div>
 
     </div>
@@ -86,7 +87,9 @@
                     border: "1px solid darkred"
                 },
                 isSoldOut: false,
-                isNewMovie: true
+                isNewMovie: true,
+                soldOut: "sold-out",
+                newMovie: "new-movie"
                
             }
         });
