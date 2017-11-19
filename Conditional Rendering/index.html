@@ -13,6 +13,8 @@
         <h1 v-else-if="num < 0">The number is negative</h1>
         <h1 v-else-if="num > 0">The number is positive</h1>        
         <h1 v-else>Not a number</h1>
+
+        <h1 v-show="num">Using v-show</h1>
     </div>
 
     <script src="https://cdn.jsdelivr.net/npm/vue"></script>
@@ -20,7 +22,7 @@
         var vm = new Vue({
             el: '#my-app',
             data: {
-                num: "a"
+                num: 0
             }
         });
     
