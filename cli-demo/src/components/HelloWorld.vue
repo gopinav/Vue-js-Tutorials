@@ -2,7 +2,7 @@
   <div class="hello">
     <h1>{{ msg }}</h1>
     <div>
-      <span v-for="(quote, i) in quotes" :key="i" v-html="quote.content">
+      <span v-for="(quote, i) in quotes" :key="i" v-html="quote.quote">
       </span>
     </div>
   </div>
@@ -23,10 +23,10 @@ export default {
   },
   methods: {
     fetchData () {
-      axios.get('http://quotesondesign.com/wp-json/posts?filter[orderby]=rand&filter[posts_per_page]=10')
+      axios.get('https://quotes.rest/qod')
         .then(response => {
           console.log(response.data)
-          this.quotes = response.data
+          this.quotes = response.data.contents.quotes
         })
         .catch(error => {
           console.log(error)
