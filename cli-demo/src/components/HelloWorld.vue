@@ -1,5 +1,5 @@
 <template>
-  <div class="hello">
+  <div>
     <h1>{{ msg }}</h1>
     <div>
       <span v-for="(quote, i) in quotes" :key="i" v-html="quote.quote">
